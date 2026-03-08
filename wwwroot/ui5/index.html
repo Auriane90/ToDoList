@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Tarefas</title>
+
+    <script
+        id="sap-ui-bootstrap"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-async="true"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-bindingSyntax="complex"
+        data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-resourceroots='{
+            "todo": "./todo" 
+        }'>
+    </script>
+</head>
+
+<body class="sapUiBody" style="height: 100%; margin: 0;">
+    <div data-sap-ui-component 
+         data-name="todo" 
+         data-id="container" 
+         data-settings='{"id" : "todo"}'
+         style="height: 100%">
+    </div>
+</body>
+</html>

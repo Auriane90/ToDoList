@@ -1,0 +1,58 @@
+{
+  "sap.app": {
+    "id": "todo",
+    "type": "application"
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "todo.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "appRoot"
+    },
+    "dependencies": {
+      "libs": {
+        "sap.m": {}
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "todo.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "main",
+          "pattern": "",
+          "target": "main"
+        },
+        {
+          "name": "detail",
+          "pattern": "detail/{id}",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "main": {
+          "viewName": "Main",
+          "viewType": "XML"
+        },
+        "detail": {
+          "viewName": "Detail",
+          "viewType": "XML"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    }
+  }
+}

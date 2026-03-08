@@ -1,0 +1,61 @@
+<mvc:View
+    controllerName="todo.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page 
+        title="Detalhes da Tarefa" 
+        showNavButton="true" 
+        navButtonPress="onNavBack"
+        backgroundDesign="List">
+
+        <content>
+            <ObjectHeader
+                responsive="true"
+                fullScreenOptimized="false"
+                title="{detail>/title}"
+                number="{detail>/id}"
+                numberUnit="ID da Tarefa">
+                <statuses>
+                    <ObjectStatus
+                        text="{= ${detail>/completed} ? 'Concluído' : 'Pendente' }"
+                        state="{= ${detail>/completed} ? 'Success' : 'Warning' }"
+                        icon="{= ${detail>/completed} ? 'sap-icon://sys-enter-2' : 'sap-icon://status-inactive' }" />
+                </statuses>
+                <attributes>
+                    <ObjectAttribute title="Responsável" text="Usuário {detail>/userId}" />
+                </attributes>
+            </ObjectHeader>
+
+            <f:SimpleForm
+                editable="false"
+                layout="ResponsiveGridLayout"
+                title="Informações Detalhadas"
+                labelSpanL="3"
+                labelSpanM="3"
+                emptySpanL="4"
+                emptySpanM="4"
+                columnsL="1"
+                columnsM="1">
+                <f:content>
+                    <core:Title text="Dados Técnicos" />
+                    
+                    <Label text="ID do Registro" />
+                    <Text text="{detail>/id}" />
+
+                    <Label text="Título da Tarefa" />
+                    <Text text="{detail>/title}" />
+
+                    <Label text="Status de Conclusão" />
+                    <Text text="{= ${detail>completed} ? 'Finalizada' : 'Pendente' }"/>
+
+                    <Label text="Código do Usuário" />
+                    <Text text="{detail>/userId}" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+
+    </Page>
+</mvc:View>

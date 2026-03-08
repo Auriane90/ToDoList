@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="todo.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"> <Page title="Lista de Tarefas" busy="{main>/loading}" busyIndicatorDelay="0">
+        <content>
+            <SearchField width="100%" placeholder="Filtrar por título..." liveChange="onSearch"/>
+
+            <Table items="{main>/todos}" id="todoTable">
+                <columns>
+                    <Column><Text text="Title"/></Column>
+                    <Column><Text text="Completed"/></Column>
+                    <Column><Text text="User"/></Column>
+                    <Column><Text text="Detalhes"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <customData>
+                            <core:CustomData 
+                                key="status" 
+                                value="{= ${main>completed} ? 'completedTask' : '' }" 
+                                writeToDom="true" />
+                        </customData>
+                        <cells>
+                            <Text text="{main>title}" />
+                            <CheckBox selected="{main>completed}" />
+                            <Text text="{main>userId}" />
+                            <Button text="Detalhes" press="onDetails"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+            <HBox justifyContent="Center" alignItems="Center">
+            <Button text="Anterior" press="onPrevPage"/>
+            <Text text="Página:"/>
+            <Text text="{main>/page}"/>
+            <Button text="Próxima" press="onNextPage"/>
+        </HBox>
+            
+            </content>
+    </Page>
+</mvc:View>
