@@ -6,9 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // 1. Configuração da Connection String
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// 2. Configuração do DbContext para MySQL
+// 2. Configuração do DbContext para SQLite
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseSqlite("Data Source=todos.db"));
 
 // --- ADICIONADO: Configuração do CORS ---
 builder.Services.AddCors(options =>

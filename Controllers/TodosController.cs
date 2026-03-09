@@ -58,35 +58,64 @@ public class TodosController : ControllerBase
         return Ok(todo);
     }
 
-    // PUT /todos/{id}
-    [HttpPut("{id}")]
-public async Task<IActionResult> UpdateTodo(int id, UpdateTodoDto dto)
-{
-    var todo = await _context.Todos.FindAsync(id);
-
-    if (todo == null)
-        return NotFound();
-
-    // Se estiver tentando deixar a tarefa como incompleta
-    if (dto.Completed == false)
+    // POST /todos
+    [HttpPost]
+    public async Task<IActionResult> CreateTodo(CreateTodoDto dto)
     {
         var incompleteCount = await _context.Todos
-            .Where(t => t.UserId == todo.UserId && t.Completed == false && t.Id != id)
+            .Where(t => t.UserId == dto.UserId && t.Completed == false)
             .CountAsync();
 
         if (incompleteCount >= 5)
         {
             return BadRequest(new
             {
-                message = "O usuário já possui 5 tarefas incompletas. Complete uma antes de adicionar outra."
+                message = "O usuário já possui 5 tarefas incompletas."
             });
         }
+
+        var todo = new Todo
+        {
+            Title = dto.Title,
+            Completed = dto.Completed,
+            UserId = dto.UserId
+        };
+
+        _context.Todos.Add(todo);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetTodo), new { id = todo.Id }, todo);
     }
 
-    todo.Completed = dto.Completed;
+    // PUT /todos/{id}
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateTodo(int id, UpdateTodoDto dto)
+    {
+        var todo = await _context.Todos.FindAsync(id);
 
-    await _context.SaveChangesAsync();
+        if (todo == null)
+            return NotFound();
 
-    return Ok(todo);
-}
+        // Se estiver tentando deixar a tarefa como incompleta
+        if (dto.Completed == false)
+        {
+            var incompleteCount = await _context.Todos
+                .Where(t => t.UserId == todo.UserId && t.Completed == false && t.Id != id)
+                .CountAsync();
+
+            if (incompleteCount >= 5)
+            {
+                return BadRequest(new
+                {
+                    message = "O usuário já possui 5 tarefas incompletas. Complete uma antes de adicionar outra."
+                });
+            }
+        }
+
+        todo.Completed = dto.Completed;
+
+        await _context.SaveChangesAsync();
+
+        return Ok(todo);
+    }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rIW761ltoSg=",
+  "dgSpecHash": "qX2kZTeSZfE=",
   "success": true,
   "projectFilePath": "C:\\Projetos\\ToDoList\\ToDoListApi\\ToDoListApi.csproj",
   "expectedPackageFiles": [
@@ -22,12 +22,15 @@
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.6\\microsoft.data.sqlclient.5.1.6.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.0\\microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.0\\microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.0\\microsoft.entityframeworkcore.design.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\9.0.0\\microsoft.entityframeworkcore.inmemory.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.0\\microsoft.entityframeworkcore.relational.9.0.0.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\9.0.0\\microsoft.entityframeworkcore.sqlite.9.0.0.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\9.0.0\\microsoft.entityframeworkcore.sqlite.core.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.0\\microsoft.entityframeworkcore.sqlserver.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.0\\microsoft.entityframeworkcore.tools.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.0\\microsoft.extensions.caching.abstractions.9.0.0.nupkg.sha512",
@@ -76,6 +79,10 @@
     "C:\\Users\\auria\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\9.0.0\\pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\auria\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
@@ -110,14 +117,7 @@
     "C:\\Users\\auria\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\auria\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit.analyzers\\1.18.0\\xunit.analyzers.1.18.0.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit.assert\\2.9.3\\xunit.assert.2.9.3.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit.core\\2.9.3\\xunit.core.2.9.3.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit.extensibility.core\\2.9.3\\xunit.extensibility.core.2.9.3.nupkg.sha512",
-    "C:\\Users\\auria\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512"
+    "C:\\Users\\auria\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
